@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Interior</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu__items">
+            <div class="menu__items__container">
+                <div class="menu__item" onclick="itemClickHanlder()">Home</div>
+                <div class="menu__item">Collection</div>
+                <div class="menu__item">About</div>
+                <div class="menu__item">Contact</div>
+            </div>
+        </div>
+
+        <header>
+            <div class="header__icon">
+                <p class="header__icon__text">this interior</p>
+            </div>
+            <div class="header__items">
+                <div class="header__item header__item--active">Home</div>
+                <div class="header__item">Collection</div>
+                <div class="header__item">About</div>
+                <div class="header__item">Contact</div>
+            </div>
+            <button class="header__burger__button" onclick="hamClickHandler()">
+                =
+            </button>
+        </header>
+        <main>
+            <div class="main__textblock">
+                <h2 class="main__textblock__header">Modern interior</h2>
+                <p class="main__textblock__text">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+                <a class="main__textblock__link">Read more</a>
+            </div>
+            <div class="main__image">
+                <img src="static/image.jpg" alt="interior image" class="main__image__img">
+                <div class="main__image__infoblock">
+                    <div class="main__image__infoblock__info info">
+                        <img src="static/profile_icon.png" alt="" class="info__icon">
+                        <div class="info__text">
+                            <h4 class="info__text__name">Yukihana Lamy</h4>
+                            <p class="info__text__position">Interior designer</p>
+                        </div>
+                    </div>
+                    <h3 class="info__header">Designed in 2020 by Yukihana Lamy</h3>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="footer__text">created by username - devChallenges.io</p>
+        </footer>
+    </div>
+
+    <script>
+        const hamClickHandler = (event) => {
+            element = document.getElementsByClassName("menu__items")[0]
+            element.style.display = 'block'
+        };
+
+        const itemClickHanlder = (event) => {
+            element = document.getElementsByClassName("menu__items")[0]
+            element.style.display = 'none'
+        };
+
+        window.onresize = (event) => {
+            if (window.innerWidth >= 1080) {     
+                element = document.getElementsByClassName("menu__items")[0]
+                element.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
