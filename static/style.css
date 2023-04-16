@@ -321,7 +321,7 @@ header {
     }
 }
 
-@media screen and (min-width: 1441px){
+@media screen and (min-width: 1500px){
     .header__items {
         display: flex;
         flex-direction: row;
@@ -408,6 +408,7 @@ header {
 
     .info__text__name {
         font-size: 3rem;
+        margin: 1rem;
     }
 
     .info__text__position {
